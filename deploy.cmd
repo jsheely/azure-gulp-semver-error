@@ -91,7 +91,7 @@ echo Handling node.js deployment.
 IF EXIST "gulpfile.js" (
   echo Building Application...
   REM If you don't do a version print first then gulp.cmd will semver error.
-  REM call gulp.cmd -v
+  call gulp.cmd -v
   call gulp.cmd
   IF !ERRORLEVEL! NEQ 0 goto error
 )
